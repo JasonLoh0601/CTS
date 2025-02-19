@@ -1,8 +1,6 @@
 package com.test.cts.controller;
 
-import com.test.cts.exception.TradeException;
-import com.test.cts.model.vo.ErrorMsgVO;
-import com.test.cts.model.vo.TradeVO;
+import com.test.cts.model.vo.TradeRequestVO;
 import com.test.cts.services.TradingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -17,9 +15,9 @@ public class TradeController {
     TradingService tradingService;
 
     @PostMapping("/trade")
-    public ResponseEntity executeTrade(@RequestBody TradeVO tradeVO) {
-        tradingService.executeTrade(tradeVO.getUserId(), tradeVO.getSymbol()
-                , tradeVO.getQuantity(), tradeVO.getOrderType());
+    public ResponseEntity executeTrade(@RequestBody TradeRequestVO tradeRequestVO) {
+        tradingService.executeTrade(tradeRequestVO.getUserId(), tradeRequestVO.getSymbol()
+                , tradeRequestVO.getQuantity(), tradeRequestVO.getOrderType());
         return new ResponseEntity(HttpStatus.CREATED);
     }
 }

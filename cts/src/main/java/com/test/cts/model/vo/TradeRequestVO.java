@@ -1,14 +1,14 @@
 package com.test.cts.model.vo;
 
 
-public class TradeVO {
+public class TradeRequestVO {
     private Long userId;
     private String symbol;
     private Double quantity;
     private String orderType;
 
 
-    public TradeVO(Long userId, String symbol, Double quantity, String orderType) {
+    public TradeRequestVO(Long userId, String symbol, Double quantity, String orderType) {
         this.userId = userId;
         this.symbol = symbol;
         this.quantity = quantity;
