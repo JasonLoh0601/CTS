@@ -13,9 +13,10 @@ API List
 4. Trade API
     - URL example - http://localhost:8080/trades/trade
     - URL method - POST
-    - Request param - {
-      "userId":10001, //
-      "symbol":"BTCUSDT",
-      "quantity":0.05,
-      "orderType":"bid or ask"
+    - Request param -
+      {
+      "userId":10001, //User Id from user table
+      "symbol":"BTCUSDT" // the symbol get from Crypto Price List,
+      "quantity":0.05 // the quantity would like to request,
+      "orderType":"bid or ask" // The order type for trade request only support "bid" and "ask"
       }
