@@ -32,6 +32,11 @@ public class UserServiceImpl implements UserService {
     @Autowired
     TransactionHistoryRepository transactionHistoryRepository;
 
+    /**
+     * Retrieve User info include wallet details
+     * @param id - User id
+     * @return
+     */
     @Override
     public InfoVO getInfo(Long id) {
         logger.info("Retrieve user information started.");
@@ -55,6 +60,11 @@ public class UserServiceImpl implements UserService {
         return new InfoVO(username, email, phoneNumber, wallets);
     }
 
+    /**
+     * Retrieve transaction history for the user
+     * @param userId - User id used for retrieve transaction history
+     * @return
+     */
     @Override
     public List<TransactionHistory> tradeHistory(Long userId) {
         logger.info("Retrieve user trade transaction started.");

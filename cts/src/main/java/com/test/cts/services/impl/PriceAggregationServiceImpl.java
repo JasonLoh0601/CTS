@@ -118,6 +118,12 @@ public class PriceAggregationServiceImpl implements PriceAggregationService {
         saveBestPricing(m);
     }
 
+    /**
+     *
+     //Retrive the Crypto price list
+     * @param key - The key use for filter the list
+     * @return
+     */
     @Override
     public List<PriceVO> list(String key) {
         logger.info("Check list started - Key: {}" ,  key);

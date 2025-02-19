@@ -37,6 +37,13 @@ public class TradingServiceImpl implements TradingService {
     @Autowired
     private UserRepository userRepository;
 
+    /**
+     * Execute and complete the trade follow current best price
+     * @param userId - User used for this trade
+     * @param symbol - Which currency would like to trade
+     * @param quantity - Quantity would like to trade
+     * @param orderType - bid or ask for this trade
+     */
     @Override
     public void executeTrade(Long userId, String symbol, Double quantity, String orderType){
         if(quantity <=0){
